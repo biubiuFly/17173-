@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6dz-Xm-kV7">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Video-->
+        <scene sceneID="BSA-Md-ufO">
+            <objects>
+                <viewController storyboardIdentifier="video" automaticallyAdjustsScrollViewInsets="NO" id="vUe-uN-0fz" customClass="Video" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="848-IE-yrx"/>
+                        <viewControllerLayoutGuide type="bottom" id="a16-So-onS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wEi-qx-Nc2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hqa-Bu-tIc"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lxf-Ij-jj9">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="up1-5n-M2D"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lxf-Ij-jj9" firstAttribute="leading" secondItem="wEi-qx-Nc2" secondAttribute="leading" id="1b3-8n-3y9"/>
+                            <constraint firstItem="lxf-Ij-jj9" firstAttribute="top" secondItem="848-IE-yrx" secondAttribute="bottom" id="9At-hQ-doy"/>
+                            <constraint firstAttribute="trailing" secondItem="lxf-Ij-jj9" secondAttribute="trailing" id="Fc3-9M-0e2"/>
+                            <constraint firstItem="Hqa-Bu-tIc" firstAttribute="top" secondItem="wEi-qx-Nc2" secondAttribute="top" constant="94" id="JCZ-QA-gHG"/>
+                            <constraint firstAttribute="trailing" secondItem="Hqa-Bu-tIc" secondAttribute="trailing" id="QHE-Ce-21q"/>
+                            <constraint firstItem="a16-So-onS" firstAttribute="top" secondItem="Hqa-Bu-tIc" secondAttribute="bottom" constant="49" id="eYY-yz-tCR"/>
+                            <constraint firstItem="Hqa-Bu-tIc" firstAttribute="leading" secondItem="wEi-qx-Nc2" secondAttribute="leading" id="w8K-d5-Gye"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btn_bacview" destination="lxf-Ij-jj9" id="gEV-Ku-s9t"/>
+                        <outlet property="sc" destination="Hqa-Bu-tIc" id="GoL-Mh-TaV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sXA-NW-XXD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-697.5" y="-140.49295774647888"/>
+        </scene>
+        <!--VideoCV-->
+        <scene sceneID="XhX-Y3-vgS">
+            <objects>
+                <collectionViewController storyboardIdentifier="videocv" id="6dz-Xm-kV7" customClass="VideoCV" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Ezm-3l-mtn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Job-pC-IaA">
+                            <size key="itemSize" width="145" height="140"/>
+                            <size key="headerReferenceSize" width="320" height="150"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="video" id="iKk-uF-CtL" customClass="VideoCell">
+                                <rect key="frame" x="10" y="160" width="145" height="140"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="145" height="140"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zdT-bi-lB4">
+                                            <frame key="frameInset" width="145" height="100"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hol-Ay-YwZ">
+                                            <frame key="frameInset" minX="3" minY="100" width="140" height="40"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tuoyuan" translatesAutoresizingMaskIntoConstraints="NO" id="jI9-fI-eqw">
+                                            <frame key="frameInset" minX="4" minY="81" width="38" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tuoyuan" translatesAutoresizingMaskIntoConstraints="NO" id="te7-Og-IJ5">
+                                            <frame key="frameInset" minX="88" minY="81" width="52" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="guankanrenshu" translatesAutoresizingMaskIntoConstraints="NO" id="kYa-Kz-TTg">
+                                            <frame key="frameInset" minX="91" minY="83" width="11" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mp8-d1-kej">
+                                            <frame key="frameInset" minX="101" minY="81" width="36" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMx-nj-olF">
+                                            <frame key="frameInset" minX="5" minY="81" width="34" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <size key="customSize" width="145" height="140"/>
+                                <connections>
+                                    <outlet property="image_gameName" destination="jI9-fI-eqw" id="uFf-T5-F0Y"/>
+                                    <outlet property="image_icon" destination="zdT-bi-lB4" id="PvC-OB-cze"/>
+                                    <outlet property="label_gameName" destination="UMx-nj-olF" id="cw3-xO-mdP"/>
+                                    <outlet property="label_playedTimes" destination="mp8-d1-kej" id="1Rp-Z5-lkY"/>
+                                    <outlet property="label_title" destination="hol-Ay-YwZ" id="qVN-Za-QuL"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="videohead" id="rzP-6S-mvc" customClass="VideoHeadView">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="6dz-Xm-kV7" id="cvV-OK-yeu"/>
+                            <outlet property="delegate" destination="6dz-Xm-kV7" id="aZJ-jP-IwI"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iWa-Xj-Ds3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="623.20000000000005" y="-74.212893553223395"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="guankanrenshu" width="22" height="22"/>
+        <image name="tuoyuan" width="76" height="30"/>
+    </resources>
+</document>

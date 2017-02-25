@@ -1,0 +1,16 @@
+//
+//  HotGameCell.h
+//  17173手游
+//
+//  Created by 吴永康 on 2016/12/3.
+//  Copyright © 2016年 吴永康. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+typedef void(^ClickTopGame)(NSInteger gameTag);
+
+@interface HotGameCell : UITableViewCell
+@property (nonatomic,strong)ClickTopGame topGameBlock;
+- (void)setupWithArray:(NSArray *)arr;
+@end

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NoNetView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="378"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyOrFailState" translatesAutoresizingMaskIntoConstraints="NO" id="wDj-do-kiF">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="75" id="RZJ-c2-wCt"/>
+                        <constraint firstAttribute="width" constant="83" id="Y9M-7X-qwO"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8r-IW-a62">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="DnR-fD-1cy"/>
+                        <constraint firstAttribute="width" constant="222" id="Wug-dw-l4U"/>
+                    </constraints>
+                    <state key="normal" title="加载失败，点击这里重新试试">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="click_refresh:" destination="iN0-l3-epB" eventType="touchUpInside" id="7kD-ns-baM"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="wDj-do-kiF" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="7Jw-9m-Fnz"/>
+                <constraint firstItem="f8r-IW-a62" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Q0q-YX-Lsz"/>
+                <constraint firstItem="f8r-IW-a62" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="50" id="bDv-AB-26T"/>
+                <constraint firstItem="wDj-do-kiF" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-20" id="fvc-95-6gk"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="41" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="emptyOrFailState" width="165" height="149"/>
+    </resources>
+</document>
